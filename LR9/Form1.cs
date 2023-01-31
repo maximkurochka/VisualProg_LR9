@@ -38,6 +38,11 @@ namespace LR9
                 return;
             }
 
+            if (mCarsList.Any(carInfo => carInfo.mNumber == numberTextBox.Text))
+            {
+                return;
+            }
+
             mCarsList.Add(new Car(numberTextBox.Text));
             UpdateListBox();
         }
