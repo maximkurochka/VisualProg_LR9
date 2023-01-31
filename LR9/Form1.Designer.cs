@@ -129,6 +129,7 @@ namespace LR9
             resources.ApplyResources(this.removeButton, "removeButton");
             this.removeButton.Name = "removeButton";
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // label5
             // 

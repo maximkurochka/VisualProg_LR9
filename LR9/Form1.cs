@@ -19,7 +19,7 @@ namespace LR9
             InitializeComponent();
             mCarsList = new List<Car>();
 
-            ChangeStateOfGroupBoxControls(false);
+            RefreshScreen();
         }
 
         private void UpdateListBox()
@@ -37,6 +37,21 @@ namespace LR9
 
             saveButton.Enabled = isEnabled;
             revertButton.Enabled = isEnabled;
+
+            removeButton.Enabled = isEnabled;
+        }
+
+        private void RefreshScreen()
+        {
+            UpdateListBox();
+
+            numberTextBox.Text = "";
+            numTextBox.Text = "";
+            modelTextBox.Text = "";
+            colorComboBox.Text = "";
+            fioTextBox.Text = "";
+
+            ChangeStateOfGroupBoxControls(false);
         }
 
         private void numberTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,6 +89,12 @@ namespace LR9
             modelTextBox.Text = carInfo.mModel;
             colorComboBox.Text = Utils.ConvertColorToString(carInfo.mColor);
             fioTextBox.Text = carInfo.mFio;
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            mCarsList.RemoveAt(numbersListBox.SelectedIndex);
+            RefreshScreen();
         }
     }
 }
