@@ -20,6 +20,12 @@ namespace LR9
             mCarsList = new List<Car>();
         }
 
+        private void UpdateListBox()
+        {
+            numbersListBox.Items.Clear();
+            mCarsList.ForEach(carInfo => numbersListBox.Items.Add(carInfo.mNumber));
+        }
+
         private void numberTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar != (char)Keys.Enter)
@@ -33,6 +39,7 @@ namespace LR9
             }
 
             mCarsList.Add(new Car(numberTextBox.Text));
+            UpdateListBox();
         }
     }
 }

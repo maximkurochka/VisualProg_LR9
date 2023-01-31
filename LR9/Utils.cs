@@ -48,7 +48,7 @@ namespace LR9
                 return false;
             }
 
-            foreach(char a in mBadSymbols)
+            foreach(var a in mBadSymbols)
             {
                 if (number.Contains(a))
                 {
