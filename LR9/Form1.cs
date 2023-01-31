@@ -107,5 +107,14 @@ namespace LR9
 
             UpdateListBox();
         }
+
+        private void revertButton_Click(object sender, EventArgs e)
+        {
+            var carInfo = mCarsList.ElementAt(numbersListBox.SelectedIndex);
+            numTextBox.Text = carInfo.mNumber;
+            modelTextBox.Text = carInfo.mModel;
+            colorComboBox.Text = Utils.ConvertColorToString(carInfo.mColor);
+            fioTextBox.Text = carInfo.mFio;
+        }
     }
 }

@@ -82,6 +82,7 @@ namespace LR9
             resources.ApplyResources(this.revertButton, "revertButton");
             this.revertButton.Name = "revertButton";
             this.revertButton.UseVisualStyleBackColor = true;
+            this.revertButton.Click += new System.EventHandler(this.revertButton_Click);
             // 
             // saveButton
             // 
