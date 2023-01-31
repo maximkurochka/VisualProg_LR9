@@ -140,6 +140,7 @@ namespace LR9
             this.numbersListBox.FormattingEnabled = true;
             resources.ApplyResources(this.numbersListBox, "numbersListBox");
             this.numbersListBox.Name = "numbersListBox";
+            this.numbersListBox.SelectedIndexChanged += new System.EventHandler(this.numbersListBox_SelectedIndexChanged);
             // 
             // numberTextBox
             // 
