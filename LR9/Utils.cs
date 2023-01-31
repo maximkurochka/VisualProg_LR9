@@ -41,6 +41,32 @@ namespace LR9
             }
         }
 
+        public static Color ConvertStringToColor(string colorStr)
+        {
+            if (colorStr.Equals("Белый"))
+            {
+                return Color.White;
+            }
+            else if (colorStr.Equals("Красный"))
+            {
+                return Color.Red;
+            }
+            else if (colorStr.Equals("Фиолетовый"))
+            {
+                return Color.Purple;
+            }
+            else if (colorStr.Equals("Зеленый"))
+            {
+                return Color.Green;
+            }
+            else if (colorStr.Equals("Серый"))
+            {
+                return Color.Grey;
+            }
+
+            return Color.Unknown;
+        }
+
         public static bool IsNumberValid(string number)
         {
             if(number.Length == 0)

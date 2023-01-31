@@ -96,5 +96,16 @@ namespace LR9
             mCarsList.RemoveAt(numbersListBox.SelectedIndex);
             RefreshScreen();
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            var carInfo = mCarsList.ElementAt(numbersListBox.SelectedIndex);
+            carInfo.mNumber = numTextBox.Text;
+            carInfo.mModel = modelTextBox.Text;
+            carInfo.mColor = Utils.ConvertStringToColor(colorComboBox.Text);
+            carInfo.mFio = fioTextBox.Text;
+
+            UpdateListBox();
+        }
     }
 }
