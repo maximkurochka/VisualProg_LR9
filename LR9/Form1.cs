@@ -33,7 +33,7 @@ namespace LR9
                 return;
             }
 
-            if(!Utils.IsNumberValid(numTextBox.Text))
+            if(!Utils.IsNumberValid(numberTextBox.Text))
             {
                 return;
             }

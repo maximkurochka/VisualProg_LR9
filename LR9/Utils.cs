@@ -43,7 +43,7 @@ namespace LR9
 
         public static bool IsNumberValid(string number)
         {
-            if(number.Length != 0)
+            if(number.Length == 0)
             {
                 return false;
             }
